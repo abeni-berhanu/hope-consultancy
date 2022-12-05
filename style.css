@@ -1,0 +1,84 @@
+body {
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    
+}
+#container {
+    position: relative;
+}
+.header {
+    z-index: 1;
+    background-color: var(--dom-color);
+    position: sticky;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header-left {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.header-right {
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 22px;
+}
+.header-right > * {
+    margin: 8px;
+    font-weight: bold;
+}
+
+
+/*The welcome Header*/
+.welcome-header {
+    position: absolute;
+    top: 7ox;
+    height: 400px;
+    width: 100%;
+    background-image: url(./images/school-1782427_960_720.jpg);
+    background-position: center;
+}
+
+.welcome-header > div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+   
+
+    background-color: #00000080;
+    
+    
+}
+
+.welcome-header > div > h1 {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-80%);
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--acc-color);
+}
+.div2 {
+    height: 2vh;
+    width: 100%;
+}
+
+
+
+:root {
+    --dom-color: #159D80;
+    --comp-color: #7784E2;
+    --acc-color: #c85c21;
+}
