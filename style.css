@@ -3,6 +3,10 @@ body {
     padding: 0;
     margin: 0;
     
+    --dom-color: #159D80;
+    --comp-color: #7784E2;
+    --acc-color: #c85c21;
+    
 }
 #container {
     position: relative;
@@ -12,36 +16,74 @@ body {
     background-color: var(--dom-color);
     position: sticky;
     top: 0;
-    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-
-
 .header-left {
     display: flex;
-    margin-left: 15px;
-    margin-top: 10px;
+    padding-left: 15px;
     font-weight: 900;
-}
+    justify-content: center;
+    position: relative;
+    top: 50%;
 
+}
 .logo {
-    width: 50px;
-    height: 50px;
+ 
+    width: 40px;
+    height: 40px;
 }
-
-.header-right {
+.header-right ul{
+    margin: 0;
     display: flex;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 22px;
+    padding-right: 15px;
+    padding-bottom: 0;
+    list-style: none;
+    justify-content: center;
 }
-.header-right > * {
-    margin: 8px;
+.header-right ul li {
+    padding-top: 10px;
+    padding-bottom: 1opx;
+    padding-left: 8px;
+    padding-right: 8px;
     font-weight: bold;
 }
+.header-right ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.header-right ul li:hover {
+    background-color: #00000080;
+}
+.menu {
+    position: absolute;
+    justify-content: space-around;
+    height: 20px;
+    width: 30px;
+    right: 15px;
+    top: 19px;
+    flex-direction: column;
+    display: none;
+}
+.menu .barline {
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: white;
+    border-color: white;
+}
 
+@media (max-width: 600px) {
+    .menu {
+        display: flex;
+    }
+    .header-right {
+       flex-direction: column;
+    }
+    
+}
 
 /*The welcome Header*/
 .welcome-header {
@@ -103,8 +145,3 @@ body {
 
 
 
-:root {
-    --dom-color: #159D80;
-    --comp-color: #7784E2;
-    --acc-color: #c85c21;
-}
